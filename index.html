@@ -1,542 +1,255 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Bootstrap demo</title>
+  <title>Tindog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/104adcb53e.js" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/104adcb53e.js" crossorigin="anonymous"></script>
 </head>
-<style>
-  .para {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-color: orange;
-  }
-
-  .line {
-    width: 100%;
-    height: 2px;
-    background-color: white;
-  }
-
-  #card-image {
-    margin: 5% 5%;
-  }
-
-  @media (max-width:900px) {
-    .title-image {
-      position: absolute;
-      font-size: 6px;
-      object-fit: contain;
-    }
-    
-  }
-</style>
 
 <body>
-  <nav class="navbar navbar-expand-sm bg-light navbar-light ps-3 pt-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="default-logo.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+
+  <section id="title">
+
+
+
+    <!-- Nav Bar -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark pb-5">
+      <a class="navbar-brand ms-2" href="">Tindog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-2">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#pricing">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#cta">Download</a>
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-
-  <div class="container-fluid mt-5">
-
+    <!-- Title -->
 
     <div class="row">
 
-      <div class="col-sm-4 col-md-4 col-lg-4 p-5">
-        <p>WELCOME TO</p>
-        <h1 class="fw-bolder">Dental Clinic</h1>
-
-        <table style="width:100%;">
-          <tr>
-            <th> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-              </svg></th>
-            <td>254 W 27ST ST, NEW YORK, NY 10011</td>
-          </tr>
-          <tr>
-            <th><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-phone"
-                viewBox="0 0 16 16">
-                <path
-                  d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-              </svg></th>
-            <td>​(212) 123-4567</td>
-          </tr>
-          <tr>
-            <th> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-              </svg></th>
-            <td>341 W 11ST ST, NEW YORK, NY 10022</td>
-          </tr>
-          <tr>
-            <th><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-phone"
-                viewBox="0 0 16 16">
-                <path
-                  d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-              </svg></th>
-            <td>​(212) 123-4567</td>
-          </tr>
-        </table>
-
-        <p class="mt-4">Image from <a class="text-decoration-none" href="#">Freepik</a></p>
-        <button type="button" class="btn btn-outline-warning btn-lg p-3 fw-bolder">BOOK ONLINE</button>
+      <div class="col-lg-6">
+        <h1 class="fw-bolder display-4 pb-4">Meet new and interesting dogs nearby.</h1>
+        <button type="button" class="btn btn-dark btn-lg"><i class="fab fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-outline-light btn-lg"><i class="fab fa-google-play"></i>
+          Download</button>
       </div>
 
-
-      <div class="col-sm-8 col-md-8 col-lg-8 ps-5 pe-0"><img src="hhh7-min.jpg" class="img-fluid" width="780px"></div>
-
-    </div>
-
-  </div>
-
-
-  <div class="container-fluid mt-5">
-    <div class="d-flex flex-wrap justify-content-around">
-
-      <div class="bg-warning rounded-4 py-4 px-1 text-center m-2">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#" class="alert-link">MORE</a>
-      </div>
-
-      <div class="bg-warning rounded-4 py-4 px-1 text-center m-2">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#" class="alert-link text-dark">MORE</a>
-      </div>
-
-      <div class="bg-warning rounded-4 py-4 px-1 text-center m-2">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#" class="alert-link">MORE</a>
-      </div>
-
-      <div class="bg-warning rounded-4 py-4 px-1 text-center m-2">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#" class="alert-link">MORE</a>
+      <div class="col-lg-6">
+        <img src="images/iphone6.png" class="title-image" alt="iphone-mockup">
       </div>
 
     </div>
 
-  </div>
 
-
-
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="col bg-warning rounded-4 text-center m-4 py-3 px-4">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#" class="alert-link">MORE</a>
-      </div>
-
-      <div class="col bg-warning rounded-4 text-center m-4 py-3 px-4">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#">MORE</a>
-      </div>
-
-      <div class="col bg-warning rounded-4 text-center m-4 py-3 px-4">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#">MORE</a>
-      </div>
-
-      <div class="col bg-warning rounded-4 text-center m-4 py-3 px-4">
-        <img src="5577184.png">
-        <h1>Dental Care</h1>
-        <p>Sample text. Click to select the text box.</p>
-        <a herf="#">MORE</a>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container mt-5">
-    <h1 class="text-center">Mission, Vision & History</h1>
-  </div>
-
-  <div class="container mt-5">
-    <div class="row">
-
-      <div class="col-sm-6 col-lg-6">
-        <div class="row">
-          <div class="col-sm-2 col-lg-2">
-            <span class="rounded-circle para"></span>
-          </div>
-          <div class="col-sm-10 col-lg-10">
-            <h1>Mission</h1>
-            <p>Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till
-              dear read. Considered use dispatched melancholy sympathize discretion led.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-sm-6 col-lg-6">
-        <div class="row">
-          <div class="col-sm-2 col-lg-2">
-            <span class="rounded-circle para"></span>
-          </div>
-          <div class="col-sm-10 col-lg-10">
-            <h1>Vision</h1>
-            <p>Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till
-              dear read. Considered use dispatched melancholy sympathize discretion led.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container mt-5">
-    <div class="row">
-
-      <div class="col-sm-6 col-lg-6">
-        <div class="row">
-          <div class="col-sm-2 col-lg-2">
-            <span class="rounded-circle para"></span>
-          </div>
-          <div class="col-sm-10 col-lg-10">
-            <h1>History</h1>
-            <p>Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till
-              dear read. Considered use dispatched melancholy sympathize discretion led.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-sm-6 col-lg-6">
-        <div class="row">
-          <div class="col-sm-2 col-lg-2">
-            <span class="rounded-circle para"></span>
-          </div>
-          <div class="col-sm-10 col-lg-10">
-            <h1>Our Team</h1>
-            <p>Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till
-              dear read. Considered use dispatched melancholy sympathize discretion led.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="container-fluid mt-5">
-
-    <div class="card img-fluid" style="width:100%;height:100%;">
-      <img src="dentist-with-dentistry-tools-isolatedf-min.jpg" alt="Card image" style="width:100%;height:100%;">
-      <div class="card-img-overlay title-image p-5">
-        <h4 class="card-title text-uppercase pt-4 lh-1">about us</h4>
-        <h1 class="card-title display-4 fw-bolder pt-3 lh-1">Dental Care Services</h1>
-        <div class="d-flex flex-wrap">
-          <div class="card-text p-2 col-3">Egestas sed tempus urna et pharetra. Amet risus nullam eget felis. Venenatis
-            urna
-            cursus eget nunc scelerisque in. Condimentum vitae sapien pellentesque habitant.</div>
-          <div class="card-text p-2 col-3">Egestas sed tempus urna et pharetra. Amet risus nullam eget felis. Venenatis
-            urna
-            cursus eget nunc scelerisque in. Condimentum vitae sapien pellentesque habitant.</div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container mt-5">
-    <h1 class="text-center display-3 fw-bolder">What People Say?</h1>
-  </div>
-
-  <div class="container mt-5">
-
-    <div class="d-flex flex-wrap justify-content-center text-white">
-
-      <div class="bg-danger p-4 m-4 rounded-4 col-sm-3">
-        <img src="4338295-87931cfe.png">
-        <h2>Stella Larson</h2>
-        <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut
-          sem nulla pharetra diam sit amet nisl.</p>
-        <span class="line"></span>
-        <p class="mt-4">Monday, May 2022</p>
-      </div>
-
-
-      <div class="bg-danger p-4 m-4 rounded-4 col-sm-3">
-        <img src="4338295-87931cfe.png">
-        <h2>Stella Larson</h2>
-        <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut
-          sem nulla pharetra diam sit amet nisl.</p>
-        <span class="line"></span>
-        <p class="mt-4">Monday, May 2022</p>
-      </div>
-
-
-      <div class="bg-danger p-4 m-4 rounded-4 col-sm-3">
-        <img src="4338295-87931cfe.png">
-        <h2>Stella Larson</h2>
-        <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut
-          sem nulla pharetra diam sit amet nisl.</p>
-        <span class="line"></span>
-        <p class="mt-4">Monday, May 2022</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container-fluid mt-5">
-
-    <div class="row">
-
-      <div class="col-sm-8 col-md-8 col-lg-8 pe-5"><img src="cvr4-min.jpg" class="img-fluid" width="780px"></div>
-
-      <div class="col-sm-4 col-md-4 col-lg-4 p-5 mt-5">
-        <h2 class="">Dentistry Clinic</h2>
-        <h1 class="display-4 fw-bolder">Quality Oral Health Care </h1>
-        <P>Nam libero justo laoreet sit amet cursus sit amet. Pellentesque habitant morbi tristique senectus et netus.
-          Sed augue lacus viverra vitae congue eu. Nunc mattis enim ut tellus elementum sagittis vitae.</P>
-        <p>Image from <a href="#">Freepik</a></p>
-        <button type="button" class="btn btn-outline-warning btn-lg p-3 fw-bolder">CONTACT US</button>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container-fluid mt-5 bg-warning">
-
-    <h1 class="display-4 fw-bolder text-center py-4">Our Tea​m</h1>
-    <p class="text-center pb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p>
-
-    <div class="d-flex flex-wrap justify-content-center">
-
-      <div class="card m-3" style="width:350px">
-        <img class="card-img-top p-4" src="1.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">General Dentist</h4>
-          <h1 class="card-text">Dr. Bob Brown</h1>
-          <p class="card-text">
-            Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem
-            bibendum
-          </p>
-          <a href="#" class="btn btn-warning"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="btn btn-warning mx-3"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="btn btn-warning"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="card m-3" style="width:350px">
-        <img class="card-img-top p-4" src="2.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">General Dentist</h4>
-          <h1 class="card-text">Dr. Mary Smith</h1>
-          <p class="card-text">
-            Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem
-            bibendum
-          </p>
-          <a href="#" class="btn btn-warning"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="btn btn-warning mx-3"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="btn btn-warning"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="card m-3" style="width:350px">
-        <img class="card-img-top p-4" src="jhhhj6.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Orthodontist</h4>
-          <h1 class="card-text">Dr. Nick Dark</h1>
-          <p class="card-text">
-            Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem
-            bibendum
-          </p>
-          <a href="#" class="btn btn-warning"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="btn btn-warning mx-3"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="btn btn-warning"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-
-
-      <div class="card m-3" style="width:350px">
-        <img class="card-img-top p-4" src="yy.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Endodontist</h4>
-          <h1 class="card-text">Dr. May Dowson</h1>
-          <p class="card-text">
-            Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem
-            bibendum
-          </p>
-          <a href="#" class="btn btn-warning"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="btn btn-warning mx-3"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="btn btn-warning"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-
-
-      <div class="card m-3" style="width:350px">
-        <img class="card-img-top p-4" src="gffgfgg.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Pediatric Dentist</h4>
-          <h1 class="card-text">Dr. Betty Nilson</h1>
-          <p class="card-text">
-            Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem
-            bibendum
-          </p>
-          <a href="#" class="btn btn-warning"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="btn btn-warning mx-3"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="btn btn-warning"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-
-
-      <div class="card m-3" style="width:350px">
-        <img class="card-img-top p-4" src="hghg.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Orthodontist</h4>
-          <h1 class="card-text">Dr. Adrian Scold</h1>
-          <p class="card-text">
-            Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem
-            bibendum
-          </p>
-          <a href="#" class="btn btn-warning rounded-circle text-white"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="btn btn-warning mx-3"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="btn btn-warning"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-
-    </div>
-    <p class="text-center py-4">Image from <a href="#">Freepik</a></p>
-
-  </div>
-
-
-  <div class="container-fluid mt-5">
-
-    <div class="row">
-
-      <div class="col-sm-4 col-md-4 col-lg-4 p-5">
-        <h2 class="">Dentistry Clinic</h2>
-        <h1 class="display-4 fw-bolder">Quality Oral Health Care </h1>
-        <P>Nam libero justo laoreet sit amet cursus sit amet. Pellentesque habitant morbi tristique senectus et netus.
-          Sed augue lacus viverra vitae congue eu. Nunc mattis enim ut tellus elementum sagittis vitae.</P>
-        <p>Image from <a href="#">Freepik</a></p>
-        <button type="button" class="btn btn-outline-warning btn-lg p-3 fw-bolder">CONTACT US</button>
-      </div>
-
-      <div class="col-sm-8 col-md-8 col-lg-8 ps-5"><img src="-min.jpg" class="img-fluid" width="780px"></div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="container-fluid mt-5">
-
-    <div class="row">
-
-      <div class="col-sm-8 col-md-8 col-lg-8 pe-5"><img src="-min1.jpg" class="img-fluid" width="780px"></div>
-
-      <div class="col-sm-4 col-md-4 col-lg-4 p-5 mt-5">
-        <h2 class="">CONTACT US</h2>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <section>
-    <div class="container mt-5">
-
-      <div class="row justify-content-center">
-
-        <div class="col-lg-3 col-sm-4 bg-warning p-3 m-2 rounded-4">
-          <i class="fa fa-phone"> CALL US</i>
-          <p class="pt-4">1 (234) 567-891,
-            1 (234) 987-654 </p>
-        </div>
-
-        <div class="col-lg-3 col-sm-4 bg-warning p-3 m-2 rounded-4">
-          <i class="fa-solid fa-location-dot"> Location</i>
-          <p class="pt-4 word-break">121 Rock Sreet, 21 Avenue, New York, NY 92103-9000 </p>
-        </div>
-
-        <div class="col-lg-3 col-sm-4 bg-warning p-3 m-2 rounded-4">
-          <i class="fa-regular fa-clock"> Hours</i>
-          <p class="pt-4">Mon – Fri …… 11 am – 8 pm, Sat, Sun  …… 6 am – 8 pm</p>
-        </div>
-
-      </div>
-
-      <p class="text-center py-4">Image from <a href="#">Freepik</a></p>
-    </div>
 
   </section>
 
-  <div class="container-fluid mt-5 bg-dark">
+
+  <!-- Features -->
+
+  <section id="features">
+
+
 
     <div class="row">
-      <div class="col-lg-12 col-sm-12">
 
-        <p class="text-center text-white p-5 mx-auto">Sample text. Sample text. Click to select the
-          text
-          box. <br>Click again or double click to start editing the text.</p>
-        <p class="text-center text-white p-5"><a href="#">Free Template</a> created with <a href="#">Website Builder
-            Software</a></p>
+      <div class="col-lg-4 text-center">
+        <i class="fa-solid fa-circle-check fa-4x lh-sm" style="color:#ff4c68;"></i>
+        <h3 class="fw-bolder">Easy to use.</h3>
+        <p>So easy to use, even your dog could do it.</p>
       </div>
+
+      <div class="col-lg-4 text-center">
+        <i class="fa-solid fa-bullseye fa-4x lh-sm" style="color:#ff4c68;"></i>
+        <h3 class="fw-bolder">Elite Clientele</h3>
+        <p>We have all the dogs, the greatest dogs.</p>
+      </div>
+
+      <div class="col-lg-4 text-center">
+        <i class="fa-solid fa-heart fa-4x lh-sm" style="color:#ff4c68;"></i>
+        <h3 class="fw-bolder">Guaranteed to work.</h3>
+        <p>Find the love of your dog's life or your money back.</p>
+      </div>
+
     </div>
-  </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <div class="container text-center text-white">
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 class="fw-bolder display-4 pb-4">I no longer have to sniff other dogs for love. I've found the hottest
+              Corgi
+              on TinDog. Woof.</h2>
+            <img src="images/dog-img.jpg" class="rounded-circle me-4" style="width:15%;" alt="dog-profile">
+            <em>Pebbles, New York</em>
+
+          </div>
+          <div class="carousel-item">
+            <h2 class="fw-bolder display-4 pb-4">My dog used to be so lonely, but with TinDog's help, they've found the
+              love of
+              their life. I think.</h2>
+            <img class="rounded-circle me-4" src="images/lady-img.jpg" style="width:15%;" alt="lady-profile">
+            <em>Beverly, Illinois</em>
+
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img src="images/techcrunch.png" style="width:15%;" alt="tc-logo">
+    <img src="images/tnw.png" style="width:15%;" alt="tnw-logo">
+    <img src="images/bizinsider.png" style="width:15%;" alt="biz-insider-logo">
+    <img src="images/mashable.png" style="width:15%;" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <div class="container">
+
+      <h2>A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Chihuahua</h3>
+            </div>
+            <div class="card-body d-grid">
+              <h2>Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-lg btn-block btn-outline-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Labrador</h3>
+            </div>
+            <div class="card-body d-grid">
+              <h2>$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Mastiff</h3>
+            </div>
+            <div class="card-body d-grid">
+              <h2>$99 / mo</h2>
+              <p>Pirority Listing</p>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <h3 class="fw-bolder display-4 pb-4">Find the True Love of Your Dog's Life Today.</h3>
+    <button type="button" class="btn btn-dark btn-lg me-4"><i class="fab fa-apple"></i> Download</button>
+    <button type="button" class="btn btn-outline-light btn-lg"><i class="fab fa-google-play"></i>
+      Download</button>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <div class="mx-4">
+      <i class="fa-brands fa-twitter m-3"></i>
+      <i class="fa-brands fa-facebook-f m-3"></i>
+      <i class="fa-brands fa-instagram m-3"></i>
+      <i class="fa-solid fa-envelope m-3"></i>
+    </div>
+
+    <p>© Copyright TinDog</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
 
 </body>
 
